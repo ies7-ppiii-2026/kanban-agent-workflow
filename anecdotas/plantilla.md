@@ -5,7 +5,7 @@
 | Campo | Valor |
 | --- | --- |
 | Tipo | Real / anonimizada / ficticia |
-| Categoría | Incidentes / aprendizajes / decisiones técnicas / trabajo en equipo / ética y privacidad / producción |
+| Categoría | Incidentes / Aprendizajes / Decisiones técnicas / Trabajo en equipo / Ética y privacidad / Producción |
 | Rol o contexto | Data scientist, data engineer, ML engineer u otro |
 | Fuente | Enlace, referencia o “no aplica” |
 

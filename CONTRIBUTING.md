@@ -41,6 +41,7 @@ Los roles deben alternarse entre issues. La asignación indica responsabilidad d
 Cada historia debe:
 
 - seguir [`anecdotas/plantilla.md`](anecdotas/plantilla.md);
+- escribir según [`anecdotas/guia-de-estilo.md`](anecdotas/guia-de-estilo.md): tono, longitud, citas y pregunta final;
 - identificar si es real, anonimizada o ficticia;
 - expresar un aprendizaje relacionado con datos o IA;
 - cumplir los criterios de privacidad y confidencialidad;

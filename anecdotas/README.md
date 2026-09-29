@@ -6,7 +6,7 @@ Las anécdotas se incorporan mediante pull requests y se agregan a este índice 
 
 | Categoría | Descripción | Anécdotas |
 | --- | --- | --- |
-| Incidentes | Fallas, errores y recuperaciones. | — |
+| Incidentes | Fallas, errores y recuperaciones. | [El modelo que aprendió la respuesta](el-modelo-que-aprendio-la-respuesta.md) |
 | Aprendizajes | Descubrimientos surgidos de la práctica. | — |
 | Decisiones técnicas | Elecciones, alternativas y consecuencias. | — |
 | Trabajo en equipo | Comunicación, coordinación y procesos. | — |

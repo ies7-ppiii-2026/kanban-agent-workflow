@@ -2,6 +2,12 @@
 
 Las anécdotas se incorporan mediante pull requests y se agregan a este índice durante el mismo cambio.
 
+## Colecciones
+
+| Colección | Historias que reúne |
+| --- | --- |
+| [Primeros incidentes con datos](coleccion-primeros-incidentes.md) | [Zona horaria](zona-horaria-que-duplico-ventas.md), [fuga de target](el-modelo-que-aprendio-la-respuesta.md) |
+
 ## Categorías
 
 | Categoría | Descripción | Anécdotas |

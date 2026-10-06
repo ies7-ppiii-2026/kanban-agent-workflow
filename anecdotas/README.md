@@ -16,7 +16,7 @@ Las anécdotas se incorporan mediante pull requests y se agregan a este índice 
 | Aprendizajes | Descubrimientos surgidos de la práctica. Ej.: una prueba revela una regla de negocio que nadie había documentado. | — |
 | Decisiones técnicas | Elecciones, alternativas y consecuencias. Ej.: se comparan dos formatos de almacenaje y se elige uno. | — |
 | Trabajo en equipo | Comunicación, coordinación y procesos. Ej.: dos equipos acuerdan quién valida los datos antes del reporte. | — |
-| Ética y privacidad | Uso responsable de datos e IA. Ej.: un dataset con datos personales obliga a anonimizar antes de publicar. | — |
+| Ética y privacidad | Uso responsable de datos e IA. Ej.: un dataset con datos personales obliga a anonimizar antes de publicar. | [El dataset que había que anonimizar](el-dataset-que-habia-que-anonimizar.md) |
 | Producción | Despliegue, operación y mantenimiento. Ej.: un reporte nocturno en ejecución publica totales incorrectos. | [La zona horaria que duplicó las ventas](zona-horaria-que-duplico-ventas.md) |
 
 ## Cómo elegir la categoría

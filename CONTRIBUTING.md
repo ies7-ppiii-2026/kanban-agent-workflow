@@ -41,13 +41,44 @@ Los roles deben alternarse entre issues. La asignación indica responsabilidad d
 Cada historia debe:
 
 - seguir [`anecdotas/plantilla.md`](anecdotas/plantilla.md);
+- escribir según [`anecdotas/guia-de-estilo.md`](anecdotas/guia-de-estilo.md): tono, longitud, citas y pregunta final;
 - identificar si es real, anonimizada o ficticia;
 - expresar un aprendizaje relacionado con datos o IA;
-- evitar datos personales, secretos, credenciales e información confidencial;
-- citar la fuente cuando atribuya hechos o palabras a una persona identificable;
+- cumplir los criterios de privacidad y confidencialidad;
+- cumplir los criterios de atribución;
 - distinguir hechos comprobables de interpretaciones del autor.
 
-No se aceptan historias presentadas como reales cuando no pueden atribuirse responsablemente. Ante una duda de privacidad o atribución, anonimizar o convertir el caso en ficticio.
+### Privacidad y confidencialidad
+
+Son dos problemas distintos y la corrección para cada uno es distinta.
+
+- **Privacidad**: hay una persona identificable. Se anonimiza o se quita la persona.
+- **Confidencialidad**: hay información reservada del cliente o del empleador, aunque no haya ninguna persona identificable. Se describe el caso de forma genérica, sin exponer el dato.
+
+Una persona se vuelve identificable sin nombrarla. Rol, organización y momento juntos identifican: "el CTO del cliente dijo que el modelo ya estaba listo" alcanza para encontrar a la persona.
+
+También hay que retirar referencias que identifican por sí solas aunque el caso parezca genérico:
+
+- nombres de clientes, proveedores o empresas;
+- nombres de sistemas internos, tablas o columnas;
+- fechas exactas de incidentes;
+- cualquier valor concreto que permita reconstruir el caso.
+
+### Atribución
+
+No es lo mismo citar un hecho que atribuir palabras, y la obligación cambia según el caso.
+
+- **Hecho comprobable** → se cita la fuente.
+- **Palabras o acciones atribuidas a una persona identificable** → se cita la fuente **y** se cuenta con su autorización, o se anonimiza a la persona y se retira la atribución.
+
+Una cita textual exige autorización aunque la persona no esté nombrada: la forma de escribir y el contexto la identifican.
+
+No se aceptan historias presentadas como reales cuando no pueden atribuirse responsablemente.
+
+Ante una duda de privacidad o atribución, el orden es el siguiente:
+
+1. **Anonimizar primero.** Suele alcanzar y conserva el realismo que hace que la historia enseñe algo.
+2. **Usar ficticia solo si el hecho en sí no es publicable**, con independencia de quién esté en la historia. En ese caso marcarla claramente como ficticia.
 
 ## Bloqueos, prioridades y excepciones
 

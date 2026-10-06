@@ -11,18 +11,18 @@
 
 ## Contexto
 
-Un equipo mantiene un pipeline de predicción diaria que consume datos de una fuente externa mediante un proceso ETL nocturno. La feature principal del modelo es `monto_ultima_transaccion`, calculada desde una tabla que llega por FTP cada madrugada.
+Un equipo mantiene un pipeline de predicción diaria que consume datos de una fuente externa mediante un proceso ETL nocturno. La feature principal del modelo es `monto_ultima_transaccion`, calculada desde una tabla que llega por FTP cada madrugada. El pipeline valida el esquema de entrada antes de ejecutar el modelo.
 
 ## Qué ocurrió
 
-Durante una actualización de versión del proveedor (marcada como "menor" en las release notes), la columna `monto_ultima_transaccion` fue renombrada a `ultimo_monto_tx` en el archivo CSV de entrega. El proceso ETL no falló porque la validación de esquema solo verificaba la presencia de columnas esperadas por posición, no por nombre. Como resultado, la feature quedó vacía (`NULL`) para todo el lote del día.
+Durante una actualización de versión del proveedor (marcada como "menor" en las release notes), la columna `monto_ultima_transaccion` fue renombrada a `ultimo_monto_tx` en el archivo CSV de entrega. La validación de esquema —que verificaba nombres y tipos esperados— detectó el cambio y **rechazó el lote completo**, impidiendo que el modelo se ejecutara con datos inválidos.
 
-El modelo, al recibir `NULL` en su feature más predictiva, empezó a emitir scores sesgados hacia la media histórica. Las predicciones se usaron para ofertas automáticas y el equipo notó la anomalía recién al mediodía, cuando las métricas de conversión cayeron un 15 %. Tardaron tres horas en rastrear el origen: el cambio de nombre de columna no comunicado.
+El pipeline se detuvo correctamente (fail-fast), pero el equipo no tenía un proceso ágil para actualizar el contrato de datos. Tuvieron que: 1) confirmar con el proveedor que el cambio era intencional y permanente, 2) ajustar la validación de esquema en el código, 3) volver a correr el pipeline manualmente. Las predicciones del día salieron con 4 horas de retraso, impactando las campañas matutinas.
 
 ## Aprendizaje
 
-Los contratos de datos (data contracts) deben validarse por nombre y tipo, no solo por posición. Cualquier cambio en el esquema de una fuente externa —aunque el proveedor lo considere menor— rompe la compatibilidad si no hay versionado explícito. Implementá validaciones de esquema estrictas en el borde de entrada (schema registry, Great Expectations, pandera) y exigí notificación previa de cambios a proveedores críticos.
+Validar el esquema en la entrada es necesario y correcto (fail-fast), pero sin un proceso de **gestión de cambios de esquema** (schema evolution) el sistema se vuelve frágil. Definí contratos de datos versionados, acordá SLA de notificación con proveedores críticos y automatizá la actualización de validadores cuando el cambio es compatible (ej. renombrado documentado). El objetivo no es evitar que falle, sino que la recuperación sea rutinaria, no una emergencia.
 
 ## Pregunta para conversar
 
-¿Cómo diseñarías un contrato de datos que permita evolucionar el esquema de la fuente sin romper consumidores, y qué mecanismo de alerta pondrías para detectar un cambio silencioso en la primera hora?
+¿Cómo diseñarías un contrato de datos versionado que permita renombrar columnas sin romper consumidores, y qué proceso pondrías para que la actualización del validador sea una tarea de minutos, no de horas?

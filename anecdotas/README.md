@@ -12,7 +12,7 @@ Las anécdotas se incorporan mediante pull requests y se agregan a este índice 
 
 | Categoría | Descripción | Anécdotas |
 | --- | --- | --- |
-| Incidentes | Fallas, errores y recuperaciones. Ej.: una fuga de datos contamina el entrenamiento y hay que corregirlo. | [El modelo que aprendió la respuesta](el-modelo-que-aprendio-la-respuesta.md), [La alerta enviada a un correo que ya no se usaba](la-alerta-enviada-a-un-correo-que-ya-no-se-usaba.md), [Los registros que no aparecían en el tablero](los-registros-que-no-aparecian-en-el-tablero.md), [El pipeline que se quedó sin memoria](pipeline-sin-memoria.md) |
+| Incidentes | Fallas, errores y recuperaciones. Ej.: una fuga de datos contamina el entrenamiento y hay que corregirlo. | [El modelo que aprendió la respuesta](el-modelo-que-aprendio-la-respuesta.md), [La alerta enviada a un correo que ya no se usaba](la-alerta-enviada-a-un-correo-que-ya-no-se-usaba.md), [Los registros que no aparecían en el tablero](los-registros-que-no-aparecian-en-el-tablero.md), [El pipeline que se quedó sin memoria](pipeline-sin-memoria.md), [El CSV exportado con otro separador](csv-exportado-con-otro-separador.md) |
 | Aprendizajes | Descubrimientos surgidos de la práctica. Ej.: una prueba revela una regla de negocio que nadie había documentado. | — |
 | Decisiones técnicas | Elecciones, alternativas y consecuencias. Ej.: se comparan dos formatos de almacenaje y se elige uno. | — |
 | Trabajo en equipo | Comunicación, coordinación y procesos. Ej.: dos equipos acuerdan quién valida los datos antes del reporte. | — |

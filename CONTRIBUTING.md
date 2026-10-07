@@ -6,12 +6,13 @@ Este acuerdo define cómo convertimos cada cambio en una práctica completa de K
 
 El tablero es la fuente compartida sobre prioridades, responsables y estado del trabajo. Cada participante debe actualizarlo cuando inicia, bloquea, pausa o finaliza una actividad, vinculando la issue y la pull request correspondientes.
 
-Estados de referencia: `Todo → In progress → In review → Done`.
+Estados de referencia: `Todo → In progress → Done`.
 
 - `Todo`: trabajo definido y todavía no iniciado.
-- `In progress`: cambio asignado y en preparación.
-- `In review`: pull request abierta y lista para revisión.
+- `In progress`: cambio asignado, en preparación o pendiente de revisión mediante una pull request.
 - `Done`: pull request aprobada y fusionada; la issue quedó cerrada.
+
+El tablero no incluye `In review` para mantener el flujo mínimo. Una pull request abierta y sus solicitudes de revisión ya representan esa etapa en GitHub, por lo que la tarjeta permanece en `In progress` hasta el merge.
 
 Un bloqueo debe registrar su causa y la siguiente acción. Antes de comenzar otra issue, se recomienda ayudar a revisar o desbloquear trabajo existente.
 
@@ -30,7 +31,7 @@ Los roles deben alternarse entre issues. La asignación indica responsabilidad d
 2. Asignársela y moverla a `In progress`.
 3. Crear una rama corta desde `main` actualizado.
 4. Realizar un cambio enfocado y verificar los enlaces y el formato Markdown.
-5. Abrir una pull request vinculada con `Closes #<número>` y mover la actividad a `In review`.
+5. Abrir una pull request vinculada con `Closes #<número>`; la actividad permanece en `In progress` durante la revisión.
 6. Solicitar revisión a otra persona del equipo.
 7. Resolver los comentarios y volver a solicitar revisión si hubo cambios sustanciales.
 8. El reviewer aprueba y realiza el merge.
